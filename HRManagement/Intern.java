@@ -1,6 +1,6 @@
 package HRManagement;
 
-public class Intern extends Employee {
+public class Intern extends Employee implements Save, Tax {
     private String collegeName;
     private String internshipDuration;
 
@@ -15,9 +15,15 @@ public class Intern extends Employee {
         System.out.println("Intern " + name + " registered from " + collegeName + " for " + internshipDuration);
     }
 
-    @Override
-    void save() {
+    public void save() {
         System.out.println("Intern details saved for " + name);
     }
     
+    public double GetTaxRate() {
+        return 0.05; 
+    }
+
+    public double CalculateTax(double salary) {
+        return salary * GetTaxRate();
+    }
 }

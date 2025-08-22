@@ -9,5 +9,4 @@ public abstract class Employee {
         this.employeeType = employeeType;
     }
     abstract void register();
-    abstract void save();
 }
