@@ -1,13 +1,6 @@
 # Exercise ex02
 
-How to run:
-```bash
-cd src
-javac Demo02.java.java
-java Demo02
-```
-
-Tasks:
-- Identify the SOLID violation(s)
-- Refactor to comply with all SOLID principles
-- Keep behavior; add a tiny demo/test
+#1. This is a little hard question for me, cz i cant really getting the frame things like what can be change in the future in this case...not a very common type...but i am able to predict some things like SRP is not following in the player class, cz by comments alone we can able to get that one class is doing more than 1 task so its not a good design...
+#2. OCP is also not following cz we cant extend the player to support different media types...
+#3. Not sure about LSP and ISP cz no inheritence was being used...
+#4. The first thing i able to see violating is DSP, cz player directly depends on creating object of concrete class rather than abstraction.
