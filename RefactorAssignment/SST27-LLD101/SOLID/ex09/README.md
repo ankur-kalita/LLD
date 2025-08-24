@@ -1,13 +1,4 @@
 # Exercise ex09
 
-How to run:
-```bash
-cd src
-javac Demo09.java.java
-java Demo09
-```
+#1. This is clearly written in the code what's the problem, its DIP...jst need to create an abstraction using interface...and use dependency injection...that's it :)...
 
-Tasks:
-- Identify the SOLID violation(s)
-- Refactor to comply with all SOLID principles
-- Keep behavior; add a tiny demo/test
