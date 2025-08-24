@@ -1,13 +1,6 @@
 # Exercise ex06
 
-How to run:
-```bash
-cd src
-javac Demo06.java.java
-java Demo06
-```
-
-Tasks:
-- Identify the SOLID violation(s)
-- Refactor to comply with all SOLID principles
-- Keep behavior; add a tiny demo/test
+#1. LSV mainly not following...
+#2. ISP also not following...All birds are forced to implement fly...
+#3. Aviary is not following OCP...
+#4. Aviary also not following DIP...
