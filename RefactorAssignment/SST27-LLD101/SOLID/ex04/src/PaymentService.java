@@ -1,11 +1,25 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class PaymentService {
-    String pay(Payment p){
-        switch (p.provider) {
-            case "CARD": return "Charged card: " + p.amount;
-            case "UPI":  return "Paid via UPI: " + p.amount;
-            case "WALLET": return "Wallet debit: " + p.amount;
-            default: throw new RuntimeException("No provider");
+    private Map<String, PaymentProcessor> processors;
+
+    public PaymentService() {
+        processors = new HashMap<>();
+        processors.put("CARD", new CardPaymentProcessor());
+        processors.put("UPI", new UpiPaymentProcessor());
+        processors.put("WALLET", new WalletPaymentProcessor());
+    }
+    
+    public String pay(Payment payment) {
+        PaymentProcessor processor = processors.get(payment.provider);
+        if (processor == null) {
+            throw new IllegalArgumentException("Unsupported payment method");
         }
+        return processor.processPayment(payment.amount);
+    }
+
+    public void registerPaymentProcessor(String provider, PaymentProcessor processor) {
+        processors.put(provider, processor);
     }
 }
