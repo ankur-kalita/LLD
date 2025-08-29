@@ -22,3 +22,5 @@ java Demo01
 ```
 
 > Refactor while preserving behavior. You may add interfaces/classes as needed to achieve SOLID compliance.
+
+## I have added my intentions also in the README of each file
