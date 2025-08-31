@@ -21,7 +21,7 @@ public class Order {
         for (OrderLine l: builder.lines) {
             copy.add(new OrderLine(l.getSku(), l.getQuantity() ,l.getUnitPriceCents()));
         }
-        this.lines = List.copyOf(copy);
+        this.lines = List.copyOf(copy); // help creating an unmodifiable list
         this.discountPercent = builder.discountPercent;
         this.expedited = builder.expedited;
         this.notes = builder.notes;
