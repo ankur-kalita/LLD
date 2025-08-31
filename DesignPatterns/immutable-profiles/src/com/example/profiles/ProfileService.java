@@ -1,5 +1,3 @@
-package com.example.profiles;
-
 import java.util.Objects;
 
 /**
@@ -12,17 +10,24 @@ public class ProfileService {
         if (id == null || id.isBlank()) throw new IllegalArgumentException("bad id");
         if (email == null || !email.contains("@")) throw new IllegalArgumentException("bad email");
 
-        UserProfile p = new UserProfile(id, email);
-        // later code keeps mutating...
-        return p;
+        return new UserProfile.Builder().id(id).email(email).build();
     }
 
-    public void updateDisplayName(UserProfile p, String displayName) {
+    public UserProfile updateDisplayName(UserProfile p, String displayName) {
         Objects.requireNonNull(p, "profile");
         if (displayName != null && displayName.length() > 100) {
             // silently trim (inconsistent policy)
             displayName = displayName.substring(0, 100);
         }
-        p.setDisplayName(displayName); // mutability leak
+        return new UserProfile.Builder()
+                .id(p.getId())
+                .email(p.getEmail())
+                .phone(p.getPhone())
+                .displayName(displayName)
+                .address(p.getAddress())
+                .marketingOptIn(p.isMarketingOptIn())
+                .twitter(p.getTwitter())
+                .github(p.getGithub())
+                .build();
     }
 }

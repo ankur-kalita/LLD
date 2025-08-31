@@ -1,5 +1,3 @@
-package com.example.profiles;
-
 import java.util.Objects;
 
 public final class Validation {
