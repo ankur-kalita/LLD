@@ -7,5 +7,6 @@ public class AuditLog {
             Files.writeString(Path.of("audit.log"), Instant.now() + " " + msg + "\n",
                     StandardOpenOption.CREATE, StandardOpenOption.APPEND);
         } catch (IOException e) { throw new UncheckedIOException(e); }
+        // Audit refers to the process of recording and tracking important actions or events in a system.
     }
 }
