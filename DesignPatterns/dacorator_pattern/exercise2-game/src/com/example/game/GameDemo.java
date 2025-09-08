@@ -24,16 +24,16 @@ public class GameDemo {
         //      c) Remove GoldenAura by recomposing (rebuild chain without it)
         //
         // Example (after you implement):
-        // Character buffed = new DamageBoost(new SpeedBoost(base, 3), 15);
-        // buffed.move();
-        // buffed.attack();
-        //
-        // Character shiny = new GoldenAura(buffed);
-        // shiny.move();
-        // shiny.attack();
-        //
-        // Character withoutAura = buffed; // removal by recomposition
-        // withoutAura.move();
-        // withoutAura.attack();
+        Character buffed = new DamageBoost(new SpeedBoost(base, 3), 15);
+        buffed.move();
+        buffed.attack();
+        
+        Character shiny = new GoldenAura(buffed);
+        shiny.move();
+        shiny.attack();
+        
+        Character withoutAura = buffed; // removal by recomposition
+        withoutAura.move();
+        withoutAura.attack();
     }
 }
