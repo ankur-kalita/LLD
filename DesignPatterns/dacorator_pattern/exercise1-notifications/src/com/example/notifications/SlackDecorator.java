@@ -1,7 +1,6 @@
 package com.example.notifications;
 
-public class SlackDecorator implements Notifier {
-    private Notifier wrapper;
+public class SlackDecorator extends NotifierDecorator {
     private final String channel;
 
     public SlackDecorator(Notifier wrapper, String channel) {
@@ -12,7 +11,7 @@ public class SlackDecorator implements Notifier {
     @Override
     public void notify(String text) {
         wrapper.notify(text);
-        System.out.println("[SLACK -> " + channel + "]: " + text);
+        System.out.println("[SLACK -> " + channel + "]: " + text );
     }
     
 }

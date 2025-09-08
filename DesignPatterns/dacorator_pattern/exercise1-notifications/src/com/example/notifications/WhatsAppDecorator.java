@@ -1,7 +1,6 @@
 package com.example.notifications;
 
-public class WhatsAppDecorator implements Notifier {
-    private Notifier wrapper;
+public class WhatsAppDecorator extends NotifierDecorator {
     private final String phoneNumber;
 
     public WhatsAppDecorator(Notifier wrapper, String phoneNumber) {
