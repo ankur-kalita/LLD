@@ -8,7 +8,7 @@ class DailyPayment implements PaymentStrategy {
     @Override
     public double calculateFee(Ticket ticket) {
         long days = Duration.between(ticket.getEntryTime(), ticket.getExitTime()).toDays();
-        if (days == 0) days = 1; // minimum 1 day
+        if (days == 0) days = 1; 
         return (days * RATE_PER_DAY) + ticket.getVehicle().getPowerSource().getSurcharge();
     }
 }

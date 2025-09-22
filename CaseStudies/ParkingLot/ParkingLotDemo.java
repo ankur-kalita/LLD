@@ -4,7 +4,6 @@ import java.util.*;
 
 public class ParkingLotDemo {
     public static void main(String[] args) throws InterruptedException {
-        // Create spots
         List<ParkingSpot> spotsLevel1 = Arrays.asList(
                 new CarSpot("C1"), new BikeSpot("B1"), new TruckSpot("T1")
         );

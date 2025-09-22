@@ -10,6 +10,10 @@ abstract class Vehicle {
     }
 
     public abstract String getType();
-    public String getLicensePlate() { return licensePlate; }
-    public PowerSource getPowerSource() { return powerSource; }
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+    public PowerSource getPowerSource() { 
+        return powerSource; 
+    }
 }

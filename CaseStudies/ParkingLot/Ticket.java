@@ -14,9 +14,19 @@ class Ticket {
         this.entryTime = LocalDateTime.now();
     }
 
-    public void closeTicket() { this.exitTime = LocalDateTime.now(); }
-    public LocalDateTime getEntryTime() { return entryTime; }
-    public LocalDateTime getExitTime() { return exitTime; }
-    public Vehicle getVehicle() { return vehicle; }
-    public ParkingSpot getSpot() { return spot; }
+    public void closeTicket() { 
+        this.exitTime = LocalDateTime.now(); 
+    }
+    public LocalDateTime getEntryTime() { 
+        return entryTime; 
+    }
+    public LocalDateTime getExitTime() { 
+        return exitTime; 
+    }
+    public Vehicle getVehicle() { 
+        return vehicle; 
+    }
+    public ParkingSpot getSpot() { 
+        return spot; 
+    }
 }

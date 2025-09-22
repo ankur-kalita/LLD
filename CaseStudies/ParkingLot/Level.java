@@ -19,6 +19,8 @@ class Level {
         return spots.stream().noneMatch(ParkingSpot::isFree);
     }
 
-    public int getLevelNumber() { return levelNumber; }
+    public int getLevelNumber() { 
+        return levelNumber; 
+    }
 }
 

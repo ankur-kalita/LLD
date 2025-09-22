@@ -8,7 +8,7 @@ class NearestSpotStrategy implements SpotAllocationStrategy {
         for (ParkingSpot spot : spots) {
             if (spot.isFree()) return spot;
         }
-        return null; // no spot available
+        return null; 
     }
 }
 
