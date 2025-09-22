@@ -36,3 +36,4 @@ class ParkingLot {
         return paymentStrategy.calculateFee(ticket);
     }
 }
+
