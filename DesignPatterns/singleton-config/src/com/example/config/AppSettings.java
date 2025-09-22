@@ -8,7 +8,7 @@ import java.util.Properties;
  * not thread-safe, reload allowed anytime, mutable global state, reflection+serialization-friendly.
  */
 public class AppSettings implements Serializable {
-    // private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
     // When you mark a class Serializable, Java assigns it a hidden unique ID (serialVersionUID). 
     // This ID is used during serialization/deserialization to check class compatibility.
 
@@ -47,9 +47,9 @@ public class AppSettings implements Serializable {
         return props.getProperty(key);
     }
 
-    // private Object readResolve() {
-    //     return getInstance(); // help against deseriliazation
-    // }
+    private Object readResolve() {
+        return getInstance(); // help against deseriliazation
+    }
     // Because by default, Java creates a new object during deserialization, bypassing getInstance().
     // Serialization → converting an object into a byte stream (so you can save it to a file, send it over a network, etc.).
     // Deserialization → converting that byte stream back into a live object in memory.

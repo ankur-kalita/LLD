@@ -19,6 +19,5 @@ public class App {
         ReportBundleFacade facade = new ReportBundleFacade(log, jw, z);
         Path zip2 = facade.export(data, Path.of("out"), "report2");
         System.out.println("DONE " + zip2);
-
     }
 }
