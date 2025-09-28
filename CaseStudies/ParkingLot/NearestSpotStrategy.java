@@ -12,3 +12,4 @@ class NearestSpotStrategy implements SpotAllocationStrategy {
     }
 }
 
+// use tree set
